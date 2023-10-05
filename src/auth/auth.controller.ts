@@ -13,7 +13,8 @@ export class AuthController {
     // signup(@Req() req: Request) {
     // signup(@Body('email', ParseIntPipe) email: string) {
     signup(@Body() dto: AuthDto) {
-        return this.authService.signup()
+        console.log(dto);
+        return this.authService.signup(dto)
     }
 
     @Get("login")
